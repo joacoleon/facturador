@@ -1,5 +1,3 @@
-import Models from '../Models';
-
 export default {
     profile: async (req, res, next) => {
         try {
