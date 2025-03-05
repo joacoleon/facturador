@@ -4,7 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import mongoose from 'mongoose';
 import router from './Routes/index.js';
-import errorHandler from './Middlewares/ErrorHandling';
+import errorHandler from './Middlewares/ErrorHandling.js';
 
 
 const dbUrl = 'mongodb://localhost:27017/facturadorDB';
