@@ -1,5 +1,5 @@
 import routerx from "express-promise-router";
-import UserRouter from "./User";
+import UserRouter from "./User.js";
 
 const router = routerx();
 
