@@ -19,6 +19,7 @@ connect()
 .catch(e => console.log(e));
 
 const app = express();
+const __dirname = path.resolve();
 
 app.use(morgan('dev'));
 app.use(cors());
