@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
-import Models from '../Models';
-import admin from '../Config/Firebase'
+import admin from '../Config/Firebase.js'
 
 const clientSecret = "chapuCataNegrita";
 

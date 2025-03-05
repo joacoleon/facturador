@@ -1,6 +1,6 @@
 import routerx from "express-promise-router";
-import UserController from "../Controllers/UserController";
-import verifyToken from "../Middlewares/Auth";
+import UserController from "../Controllers/UserController.js";
+import verifyToken from "../Middlewares/Auth.js";
 
 const router = routerx();
 const controller = UserController;

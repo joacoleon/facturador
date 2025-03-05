@@ -1,4 +1,4 @@
-import TokenService from "../Services/TokenService";
+import TokenService from "../Services/TokenService.js";
 
 const verifyToken = async (req, res, next) => {
     console.log("verify");
@@ -9,7 +9,7 @@ const verifyToken = async (req, res, next) => {
         });
     }
     try {
-        //const user = await TokenService.decode(token);
+        await TokenService.decode(token);
 
         // Attach the user to the request object for later use (optional)
         //req.user = user;
