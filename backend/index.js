@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import path from 'path';
 import mongoose from 'mongoose';
-import router from './Routes';
+import router from './Routes/index.js';
 import errorHandler from './Middlewares/ErrorHandling';
 
 
