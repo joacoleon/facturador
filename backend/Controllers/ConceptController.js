@@ -1,4 +1,4 @@
-import Models from "../Models";
+import Models from "../Models/index.js";
 
 export default {
     add: async (req, res, next) => {
