@@ -5,6 +5,7 @@ import Home from '@/components/Home.vue'
 import ChangePassword from '@/components/ChangePassword.vue'
 import SearchClient from '@/components/Client/SearchClient.vue'
 import NewClient from '@/components/Client/NewClient.vue'
+import Concepts from '@/components/Concepts.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: '/client/new',
       name: 'newClient',
       component: NewClient
+    },
+    {
+      path: '/concepts',
+      name: 'concepts',
+      component: Concepts
     }
   ],
 });

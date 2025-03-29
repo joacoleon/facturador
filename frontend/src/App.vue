@@ -12,16 +12,13 @@
       <v-app-bar app>
         <div class="app-bar-container">
           <div class="flex-1-1-0">
-            <!-- <span >
-          
-        </span> -->
-            <v-app-bar-title class="ml-md-5">
+            <v-app-bar-title class="ml-sm-5">
               <v-app-bar-nav-icon class="hidden-sm-and-up" @click="showSidebar = !showSidebar"></v-app-bar-nav-icon>
               Facturador
             </v-app-bar-title>
           </div>
 
-          <div class="d-flex justify-center flex-1-1-0 hidden-sm-and-down">
+          <div class="d-none d-md-flex justify-center flex-1-1-0">
             <v-btn :active="false" v-for="(item, index) in menuItems" :key="index" :value="index" :to="{ name: item.name }"
               :prepend-icon="item.icon">
               {{ item.title }}
@@ -35,7 +32,8 @@
             </v-btn>
           </div>
           <div class="d-flex justify-end flex-1-1-0">
-            <v-btn class="mx-5 text-none">{{ authStore.user?.displayName }}
+            <v-btn class="mx-5 text-none">
+              <span class="hidden-xs">{{ authStore.user?.displayName }}</span>
               <v-badge dot inline color="success">
                 <v-avatar class="mr-1" color="red" size="30">
                   <span class="text-h7">{{ userInitials }}</span>
@@ -59,7 +57,7 @@
       </v-app-bar>
     </div>
 
-    <v-main app>
+    <v-main app class="bg-grey-lighten-4">
       <RouterView />
     </v-main>
   </v-app>
@@ -78,6 +76,7 @@ const menuItems = ref([
   { title: 'Inicio', icon: 'mdi-home-outline', name: "home" },
   { title: 'Clientes', icon: 'mdi-account-outline', subitems: [{ title: "Alta de cliente", name: "newClient" }, { title: "Buscar cliente", name: "searchClient" }] },
   { title: 'Facturas', icon: 'mdi-invoice-fast-outline', subitems: [{ title: "Facturar", name: "newClient" }, { title: "Buscar factura", name: "newClient" }] },
+  { title: 'Otros', icon: 'mdi-table-edit', subitems: [{ title: "Conceptos", name: "concepts" }] },
 ]);
 // #endregion
 

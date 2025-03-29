@@ -7,7 +7,7 @@ import router from './Routes/index.js';
 import errorHandler from './Middlewares/ErrorHandling.js';
 
 
-const dbUrl = 'mongodb://localhost:27017/facturadorDB';
+const dbUrl = 'mongodb+srv://gupdbuser:d1uADF2EZWNhv8Aq@clusterfacturador.yjq6n.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFacturador';
 mongoose.set('strictQuery', false);
 
 async function connect(){
