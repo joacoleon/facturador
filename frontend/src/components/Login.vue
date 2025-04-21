@@ -74,7 +74,6 @@ async function validateLoginForm() {
 
 const login = async () => {
     if (await validateLoginForm()) {
-        console.log("login");
         await signInWithEmailAndPassword(auth, email.value, password.value)
             .then((result) => {
                 authStore.user = result.user;

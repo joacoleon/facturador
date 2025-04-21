@@ -9,7 +9,6 @@ export const useAuthStore = defineStore('authStore', () => {
     const user = ref<User | null>(null);
 
     const getIdToken = async (): Promise<string | null> => {
-        console.log("getIdToken")
         if (user.value) {
             return await user.value.getIdToken(true);
         }

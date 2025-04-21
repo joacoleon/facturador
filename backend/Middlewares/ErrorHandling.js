@@ -3,8 +3,6 @@ const errorHandler = (err, req, res, next) => {
     error.message = err.message;
     error.name = err.name;
 
-    console.log(err);
-
     let message;
 
     if (err.name === 'TypeError' || err.name === 'CastError') {

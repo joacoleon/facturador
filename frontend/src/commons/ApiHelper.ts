@@ -16,7 +16,6 @@ ApiHelper.interceptors.request.use(
 
         const token = await authStore.getIdToken();
         if (token) {
-            console.log(token);
             config.headers.Authorization = `Bearer ${token}`;
         }
 
